@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Robux, V-Bucks, Minecoins, and Diamonds Generator</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      width: 300px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #progressBarContainer {
+      width: 80%;
+      background-color: #444;
+      margin: 20px auto;
+      height: 25px;
+      border-radius: 5px;
+    }
+    #progressBar {
+      width: 0%;
+      height: 100%;
+      background-color: #00ffcc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💰 Get Free Robux, V-Bucks, Minecoins & Diamonds 💎</h1>
+  <p>Enter your <strong>Roblox, Fortnite, or Minecraft</strong> username below and click "Generate Now"</p>
+  <input type="text" placeholder="Enter your Roblox, Fortnite or Minecraft username" id="username"><br>
+  <button onclick="startRickroll()">Generate Now</button>
+
+  <div id="progressBarContainer" style="display:none;">
+    <div id="progressBar"></div>
+  </div>
+
+  <script>
+    function startRickroll() {
+      const username = document.getElementById('username').value;
+      if (!username) {
+        alert("Please enter a username!");
+        return;
+      }
+
+      document.getElementById('progressBarContainer').style.display = 'block';
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += 1;
+        document.getElementById('progressBar').style.width = progress + '%';
+        if (progress >= 100) {
+          clearInterval(interval);
+          window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        }
+      }, 30);
+    }
+  </script>
+</body>
+</html>
